@@ -1655,4 +1655,20 @@ void EntryList::print_order_grouped_list(EntryList * grouped_list)
 	delete ordered_group_list;
 }
 
+void EntryList::delete_entry_list(EntryList * entry_head)
+{
+        Entry * temp_entry;
+	while ((temp_entry = entry_head->get_head()) != NULL)
+	{
+		// Detach the node after the head -- link head to the node after the next
+		entry_head->set_head(temp_entry->get_next_entry());
+
+		// Delete the detached node
+		delete temp_entry;
+
+	}
+
+
+}
+
 

@@ -86,6 +86,7 @@ class EntryList {
 		void do_collect_aggregate(Entry *, Entry *);
 		void perform_all_aggregate_functions(Entry *, Entry *);
 		void print_order_grouped_list(EntryList *);
+		void delete_entry_list(EntryList *);
 
 	private:
 		Entry * head;

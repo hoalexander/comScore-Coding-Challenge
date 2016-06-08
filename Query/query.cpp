@@ -101,6 +101,7 @@ int main(int argc, char* argv[])
 		GroupedHead->print_selected_fields();
 
 		//After printing out, delete the list
+		GroupedHead->delete_entry_list(GroupedHead);
 		delete GroupedHead;
 	} 
 	else
@@ -111,6 +112,7 @@ int main(int argc, char* argv[])
 
 	cin.get();
 	inputfile.close();
+	EntryHead->delete_entry_list(EntryHead);
 	delete EntryHead;
 
 
